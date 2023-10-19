@@ -1,7 +1,7 @@
 // import { StackScreenProps } from '@react-navigation/stack';
 import React, { useEffect } from 'react';
 import { Button, Text, View } from 'react-native';
-import { styles } from '../theme/appTheme';
+import { colors, styles } from '../theme/appTheme';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { DrawerScreenProps } from '@react-navigation/drawer';
 import Icon from 'react-native-vector-icons/MaterialIcons';
@@ -44,7 +44,7 @@ const Page1Screen = ({ navigation }: Props) => {
 					}
 					style={{ ...styles.bigBtn, backgroundColor: '#5856D6' }}
 				>
-					<Icon name='person' style={styles.icon} />
+					<Icon name='person' style={{ ...styles.icon, backgroundColor: colors.white }} />
 					<Text style={styles.bigBtnText}>Pedro</Text>
 				</TouchableOpacity>
 
@@ -57,7 +57,7 @@ const Page1Screen = ({ navigation }: Props) => {
 					}
 					style={{ ...styles.bigBtn, backgroundColor: '#FF9427' }}
 				>
-					<Icon name='person' style={styles.icon} />
+					<Icon name='person' style={{ ...styles.icon, backgroundColor: colors.white }} />
 					<Text style={styles.bigBtnText}>Maria</Text>
 				</TouchableOpacity>
 			</View>
