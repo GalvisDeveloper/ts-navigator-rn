@@ -12,7 +12,7 @@ const SettingsScreen = () => {
 	return (
 		<View style={{ ...styles.globalMargin, marginTop: insets.top }}>
 			<Text style={styles.title}>Settings screen</Text>
-			<Text style={styles.title}>{JSON.stringify(context.authState) || ''}</Text>
+			<Text style={styles.title}>{JSON.stringify(context.authState, null, 4) || ''}</Text>
 		</View>
 	);
 };
