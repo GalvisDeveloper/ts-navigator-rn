@@ -1,12 +1,10 @@
 // import { StackScreenProps } from '@react-navigation/stack';
-import React, { useEffect } from 'react';
-import { Button, Text, View } from 'react-native';
-import { colors, styles } from '../theme/appTheme';
-import { TouchableOpacity } from 'react-native-gesture-handler';
 import { DrawerScreenProps } from '@react-navigation/drawer';
+import React from 'react';
+import { Button, Text, View } from 'react-native';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import { useContext } from 'react';
-import { AuthContext } from '../context/AuthContext';
+import { colors, styles } from '../theme/appTheme';
 
 // interface Props extends StackScreenProps<any, any> {}
 interface Props extends DrawerScreenProps<any, any> {}
@@ -28,8 +26,6 @@ const Page1Screen = ({ navigation }: Props) => {
 	// 	});
 	// }, []);
 
-	const { changeUsername } = useContext(AuthContext);
-
 	return (
 		<View style={styles.globalMargin}>
 			<Text style={styles.title}>Pagina1Screen</Text>
@@ -41,7 +37,6 @@ const Page1Screen = ({ navigation }: Props) => {
 			<View style={{ flexDirection: 'row', gap: 10 }}>
 				<TouchableOpacity
 					onPress={() => {
-						changeUsername('Pedro');
 						navigation.navigate('Person', {
 							id: 1,
 							name: 'Pedro',
@@ -55,7 +50,6 @@ const Page1Screen = ({ navigation }: Props) => {
 
 				<TouchableOpacity
 					onPress={() => {
-						changeUsername('Pedro');
 						navigation.navigate('Person', {
 							id: 2,
 							name: 'Maria',
